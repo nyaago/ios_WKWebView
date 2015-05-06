@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		72C518C31AF9F86400E56596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C518C21AF9F86400E56596 /* AppDelegate.swift */; };
 		72C518C61AF9F86400E56596 /* WebViewDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72C518C41AF9F86400E56596 /* WebViewDemo.xcdatamodeld */; };
-		72C518C81AF9F86400E56596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C518C71AF9F86400E56596 /* ViewController.swift */; };
-		72C518CB1AF9F86400E56596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C518C91AF9F86400E56596 /* Main.storyboard */; };
 		72C518CD1AF9F86400E56596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C518CC1AF9F86400E56596 /* Images.xcassets */; };
-		72C518D01AF9F86400E56596 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C518CE1AF9F86400E56596 /* LaunchScreen.xib */; };
 		72C518DC1AF9F86400E56596 /* WebViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C518DB1AF9F86400E56596 /* WebViewDemoTests.swift */; };
+		72C518EC1AF9F9FC00E56596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C518EA1AF9F9FC00E56596 /* ViewController.swift */; };
+		72C518ED1AF9F9FC00E56596 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C518EB1AF9F9FC00E56596 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +30,12 @@
 		72C518C11AF9F86400E56596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C518C21AF9F86400E56596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C518C51AF9F86400E56596 /* WebViewDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WebViewDemo.xcdatamodel; sourceTree = "<group>"; };
-		72C518C71AF9F86400E56596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		72C518CA1AF9F86400E56596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72C518CC1AF9F86400E56596 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		72C518CF1AF9F86400E56596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		72C518D51AF9F86400E56596 /* WebViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C518DA1AF9F86400E56596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C518DB1AF9F86400E56596 /* WebViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoTests.swift; sourceTree = "<group>"; };
+		72C518EA1AF9F9FC00E56596 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72C518EB1AF9F9FC00E56596 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +59,7 @@
 		72C518B41AF9F86400E56596 = {
 			isa = PBXGroup;
 			children = (
+				72C518E91AF9F99000E56596 /* Classes */,
 				72C518BF1AF9F86400E56596 /* WebViewDemo */,
 				72C518D81AF9F86400E56596 /* WebViewDemoTests */,
 				72C518BE1AF9F86400E56596 /* Products */,
@@ -80,10 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				72C518C21AF9F86400E56596 /* AppDelegate.swift */,
-				72C518C71AF9F86400E56596 /* ViewController.swift */,
-				72C518C91AF9F86400E56596 /* Main.storyboard */,
 				72C518CC1AF9F86400E56596 /* Images.xcassets */,
-				72C518CE1AF9F86400E56596 /* LaunchScreen.xib */,
 				72C518C41AF9F86400E56596 /* WebViewDemo.xcdatamodeld */,
 				72C518C01AF9F86400E56596 /* Supporting Files */,
 			);
@@ -113,6 +109,16 @@
 				72C518DA1AF9F86400E56596 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72C518E91AF9F99000E56596 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				72C518EA1AF9F9FC00E56596 /* ViewController.swift */,
+				72C518EB1AF9F9FC00E56596 /* ViewController.xib */,
+			);
+			name = Classes;
+			path = WebViewDemo/Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72C518CB1AF9F86400E56596 /* Main.storyboard in Resources */,
-				72C518D01AF9F86400E56596 /* LaunchScreen.xib in Resources */,
+				72C518ED1AF9F9FC00E56596 /* ViewController.xib in Resources */,
 				72C518CD1AF9F86400E56596 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72C518C81AF9F86400E56596 /* ViewController.swift in Sources */,
+				72C518EC1AF9F9FC00E56596 /* ViewController.swift in Sources */,
 				72C518C61AF9F86400E56596 /* WebViewDemo.xcdatamodeld in Sources */,
 				72C518C31AF9F86400E56596 /* AppDelegate.swift in Sources */,
 			);
@@ -238,25 +243,6 @@
 			targetProxy = 72C518D61AF9F86400E56596 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		72C518C91AF9F86400E56596 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72C518CA1AF9F86400E56596 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		72C518CE1AF9F86400E56596 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72C518CF1AF9F86400E56596 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		72C518DD1AF9F86400E56596 /* Debug */ = {
