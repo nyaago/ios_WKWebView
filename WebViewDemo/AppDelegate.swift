@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
   var viewController: ViewController?
+  var navigationController: UINavigationController?
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -21,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     self.window?.backgroundColor = UIColor.whiteColor()
     self.viewController = ViewController(nibName: "ViewController", bundle: nil)
-    self.window?.rootViewController = self.viewController
+    self.navigationController = UINavigationController(rootViewController: self.viewController!)
+    self.window?.rootViewController = self.navigationController
     self.window?.makeKeyAndVisible()
     return true
   }

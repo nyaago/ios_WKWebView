@@ -13,6 +13,8 @@
 		72C518DC1AF9F86400E56596 /* WebViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C518DB1AF9F86400E56596 /* WebViewDemoTests.swift */; };
 		72C518EC1AF9F9FC00E56596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C518EA1AF9F9FC00E56596 /* ViewController.swift */; };
 		72C518ED1AF9F9FC00E56596 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C518EB1AF9F9FC00E56596 /* ViewController.xib */; };
+		72D852A71B119F9F00FB6765 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 72D852A51B119F9F00FB6765 /* arrow_left.png */; };
+		72D852A81B119F9F00FB6765 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 72D852A61B119F9F00FB6765 /* arrow_right.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		72C518DB1AF9F86400E56596 /* WebViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoTests.swift; sourceTree = "<group>"; };
 		72C518EA1AF9F9FC00E56596 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72C518EB1AF9F9FC00E56596 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		72D852A51B119F9F00FB6765 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		72D852A61B119F9F00FB6765 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		72C518B41AF9F86400E56596 = {
 			isa = PBXGroup;
 			children = (
+				72D852A41B119F4B00FB6765 /* Resources */,
 				72C518E91AF9F99000E56596 /* Classes */,
 				72C518BF1AF9F86400E56596 /* WebViewDemo */,
 				72C518D81AF9F86400E56596 /* WebViewDemoTests */,
@@ -119,6 +124,16 @@
 			);
 			name = Classes;
 			path = WebViewDemo/Classes;
+			sourceTree = "<group>";
+		};
+		72D852A41B119F4B00FB6765 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72D852A51B119F9F00FB6765 /* arrow_left.png */,
+				72D852A61B119F9F00FB6765 /* arrow_right.png */,
+			);
+			name = Resources;
+			path = WebViewDemo/Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +216,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D852A71B119F9F00FB6765 /* arrow_left.png in Resources */,
 				72C518ED1AF9F9FC00E56596 /* ViewController.xib in Resources */,
+				72D852A81B119F9F00FB6765 /* arrow_right.png in Resources */,
 				72C518CD1AF9F86400E56596 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -343,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -401,6 +420,7 @@
 				72C518E11AF9F86400E56596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72C518E21AF9F86400E56596 /* Build configuration list for PBXNativeTarget "WebViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +429,7 @@
 				72C518E41AF9F86400E56596 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
