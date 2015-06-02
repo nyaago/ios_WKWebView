@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		729FE90F1B1C609600706D93 /* BackForwardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729FE90D1B1C609600706D93 /* BackForwardListViewController.swift */; };
+		729FE9101B1C609600706D93 /* BackForwardListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729FE90E1B1C609600706D93 /* BackForwardListViewController.xib */; };
 		72C518C31AF9F86400E56596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C518C21AF9F86400E56596 /* AppDelegate.swift */; };
 		72C518C61AF9F86400E56596 /* WebViewDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72C518C41AF9F86400E56596 /* WebViewDemo.xcdatamodeld */; };
 		72C518CD1AF9F86400E56596 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C518CC1AF9F86400E56596 /* Images.xcassets */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		729FE90D1B1C609600706D93 /* BackForwardListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackForwardListViewController.swift; sourceTree = "<group>"; };
+		729FE90E1B1C609600706D93 /* BackForwardListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackForwardListViewController.xib; sourceTree = "<group>"; };
 		72C518BD1AF9F86400E56596 /* WebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C518C11AF9F86400E56596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C518C21AF9F86400E56596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				72C518EA1AF9F9FC00E56596 /* ViewController.swift */,
 				72C518EB1AF9F9FC00E56596 /* ViewController.xib */,
+				729FE90D1B1C609600706D93 /* BackForwardListViewController.swift */,
+				729FE90E1B1C609600706D93 /* BackForwardListViewController.xib */,
 			);
 			name = Classes;
 			path = WebViewDemo/Classes;
@@ -220,6 +226,7 @@
 				72C518ED1AF9F9FC00E56596 /* ViewController.xib in Resources */,
 				72D852A81B119F9F00FB6765 /* arrow_right.png in Resources */,
 				72C518CD1AF9F86400E56596 /* Images.xcassets in Resources */,
+				729FE9101B1C609600706D93 /* BackForwardListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +247,7 @@
 				72C518EC1AF9F9FC00E56596 /* ViewController.swift in Sources */,
 				72C518C61AF9F86400E56596 /* WebViewDemo.xcdatamodeld in Sources */,
 				72C518C31AF9F86400E56596 /* AppDelegate.swift in Sources */,
+				729FE90F1B1C609600706D93 /* BackForwardListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,8 @@ class ViewController: UIViewController, WKNavigationDelegate, UIGestureRecognize
     var longPressForwardGeatureRecognizer: UILongPressGestureRecognizer?
     var tapBackGeatureRecognizer: UITapGestureRecognizer?
     var tapForwardGeatureRecognizer: UITapGestureRecognizer?
+    var backForwardListViewController :BackForwardListViewController?
+    var backForwardListItem: WKBackForwardListItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +45,17 @@ class ViewController: UIViewController, WKNavigationDelegate, UIGestureRecognize
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        var list: WKBackForwardList? = backForwardList()
         let urlRequest = NSURLRequest(URL: URL ?? NSURL(string: "http://www.google.com" )!)
-        webView?.loadRequest(urlRequest)
+        if (self.backForwardListItem != nil) {
+            self.webView?.goToBackForwardListItem(self.backForwardListItem!)
+            self.backForwardListItem = nil
+        }
+        else if(list?.currentItem == nil) {
+            webView?.loadRequest(urlRequest)
+        }
+        else {
+        }
         addHistoryLongPressGestureHander()
         addTapGestureHander()
     }
@@ -109,17 +120,21 @@ class ViewController: UIViewController, WKNavigationDelegate, UIGestureRecognize
     
     func handleLongPressBackTo(sender: UILongPressGestureRecognizer) {
         NSLog("handleLongPressBackTo")
-        showBackHistory()
+        if(sender.state == UIGestureRecognizerState.Began) {
+            showBackHistory()
+        }
     }
 
     func handleLongPressForwardTo(sender: UILongPressGestureRecognizer) {
         NSLog("handleLongPressForwardTo")
-        showForwardHistory()
+        if(sender.state == UIGestureRecognizerState.Began) {
+            showForwardHistory()
+        }
     }
     
     func handleTapBackTo(sender: UITapGestureRecognizer) {
         NSLog("handleTapBackTo")
-        backTo()
+            backTo()
     }
     
     func handleTapForwardTo(sender: UITapGestureRecognizer) {
@@ -127,16 +142,35 @@ class ViewController: UIViewController, WKNavigationDelegate, UIGestureRecognize
         forwardTo()
     }
 
+    func backForwardList() -> WKBackForwardList? {
+        return self.webView?.backForwardList
+    }
 
     
     // Private
     private func showBackHistory() {
-        
+        backForwardListViewController = BackForwardListViewController()
+        self.backForwardListViewController?.incForwardItems = false
+        self.backForwardListViewController?.incBackItems = true
+        self.backForwardListViewController?.backForwardList = self.backForwardList()
+        var nav : UINavigationController? =  UINavigationController(rootViewController: backForwardListViewController!)
+        self.navigationController!.presentViewController(nav!, animated: true) {
+            backForwardListViewController?.webViewController = self
+        }
     }
     
     private func showForwardHistory() {
+        backForwardListViewController = BackForwardListViewController()
+        self.backForwardListViewController?.incForwardItems = true
+        self.backForwardListViewController?.incBackItems = false
+        self.backForwardListViewController?.backForwardList = self.backForwardList()
+        var nav : UINavigationController? =  UINavigationController(rootViewController: backForwardListViewController!)
+        self.navigationController!.presentViewController(nav!, animated: true) {
+            backForwardListViewController?.webViewController = self
+        }
         
     }
+    
     
     
     private func addHistoryLongPressGestureHander() {
@@ -184,9 +218,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UIGestureRecognize
     
     private func setAttributesToLongPressGestureRecognizer(
         longPressGestureRecognizer: UILongPressGestureRecognizer!) {
-        
-        longPressBackGeatureRecognizer?.numberOfTapsRequired = 1
-        longPressBackGeatureRecognizer?.minimumPressDuration = 1
+        longPressGestureRecognizer?.minimumPressDuration = 1
     }
 
     private func setAttributesToTapGestureRecognizer(
